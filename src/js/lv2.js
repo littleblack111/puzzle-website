@@ -1,6 +1,7 @@
 const moves = document.getElementById("moves-count");
 const timeValue = document.getElementById("time");
 const score = document.getElementById("score");
+const avgScore = document.getElementById('avgScore');
 const startButton = document.getElementById("start");
 const stopButton = document.getElementById("stop");
 const gameContainer = document.querySelector(".game-container");
@@ -34,6 +35,13 @@ minutes = 0;
 let movesCount = 0;
 let winCount = 0;
 
+// Add this at the end of your timeGenerator function
+const avgScoreCalculator = () => {
+    let time = minutes + (seconds / 60);
+    let avg = (winCount / 2) / time;
+    avgScore.innerHTML = `<span>Avg Score:</span> ${avg.toFixed(2)}`;
+};
+
 //For timer
 const timeGenerator = () => {
 	seconds += 1;
@@ -46,6 +54,7 @@ const timeGenerator = () => {
 	let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
 	let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
 	timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+    avgScoreCalculator();
 };
 
 //For calculating moves
@@ -91,6 +100,12 @@ const matrixGenerator = (cardValues, size = 4) => {
 			<img src="${cardValues[i].image}" class="image"/></div>
 		</div>
 		`;
+}
+if (winCount == Math.floor(cardValues.length / 2)) {
+	result.innerHTML = `<h2>You Won</h2>
+	<h4>Moves: ${movesCount}</h4>`;
+	avgScoreCalculator();
+	stopGame();
 }
 //Grid
 gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
@@ -140,12 +155,9 @@ cards.forEach((card) => {
 			let delay = setTimeout(() => {
 			tempFirst.classList.remove("flipped");
 			tempSecond.classList.remove("flipped");
-			}, 900);
-		}
-		}
-	}
+		}, 900);
+		}}}});
 	});
-});
 };
 
 //Start game
