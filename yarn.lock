@@ -2948,7 +2948,12 @@ postcss-position@^1.0.0:
   dependencies:
     postcss "^6.0.7"
 
-postcss-preset-env@^9.2.0:
+postcss-prefix-hover@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-prefix-hover/-/postcss-prefix-hover-1.0.3.tgz#79b224a430f93f98bd6dd40d9a43a26f490ae319"
+  integrity sha512-OwGviqElqMPmC6sDVIihLQ9q+2f3sNPRv28m/hw0gBn2RSelCLP9pQgqYXM77GLAbdhqnHRhWBFXRKlKe2zvhQ==
+
+postcss-preset-env@^9.3.0:
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-9.3.0.tgz#58f296087cf3dc18cb75af11954c6c5822220327"
   integrity sha512-ycw6doPrqV6QxDCtgiyGDef61bEfiSc59HGM4gOw/wxQxmKnhuEery61oOC/5ViENz/ycpRsuhTexs1kUBTvVw==
