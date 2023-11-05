@@ -5,7 +5,6 @@ function finishLevel() {
 	<dialog style="z-index: 1000;" id="dialog">
 		<h2>Yoooo! Congratulations!!!</h2>
 		<p>You've completed the ${dialog.getAttribute('page')} challenge!</p>
-		<span>${dialog.getAttribute('msg')}</span>
 		<h4>Press the button below to go to the next level!!!</h4>
 		<form method="dialog">
 			<button autofocus id="finishPressed">Let's Go!</button>
