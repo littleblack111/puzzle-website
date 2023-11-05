@@ -12,18 +12,18 @@ let secondCard = false;
 
 //Items array
 const items = [
-	{ name: "bee", image: "bee.png" },
-	{ name: "crocodile", image: "crocodile.png" },
-	{ name: "macaw", image: "macaw.png" },
-	{ name: "gorilla", image: "gorilla.png" },
-	{ name: "tiger", image: "tiger.png" },
-	{ name: "monkey", image: "monkey.png" },
-	{ name: "chameleon", image: "chameleon.png" },
-	{ name: "piranha", image: "piranha.png" },
-	{ name: "anaconda", image: "anaconda.png" },
-	{ name: "sloth", image: "sloth.png" },
-	{ name: "cockatoo", image: "cockatoo.png" },
-	{ name: "toucan", image: "toucan.png" },
+	{ name: "A", image: "/images/A.png" },
+	{ name: "2", image: "/images/2.png" },
+	{ name: "3", image: "/images/3.png" },
+	{ name: "4", image: "/images/4.png" },
+	{ name: "5", image: "/images/5.png" },
+	{ name: "6", image: "/images/6.png" },
+	{ name: "7", image: "/images/7.png" },
+	{ name: "8", image: "/images/8.png" },
+	{ name: "9", image: "/images/9.png" },
+	{ name: "10", image: "/images/10.png" },
+	{ name: "J", image: "/images/J.png" },
+	{ name: "Q", image: "/images/Q.png" },
 ];
 
 //Initial Time
@@ -114,7 +114,7 @@ cards.forEach((card) => {
 		//secondCard and value
 		secondCard = card;
 		let secondCardValue = card.getAttribute("data-card-value");
-		if (firstCardValue == secondCardValue) {
+		if (firstCardValue == secondCardValue && firstCard != secondCard) {
 			//if both cards match add matched class so these cards would beignored next time
 			firstCard.classList.add("matched");
 			secondCard.classList.add("matched");
@@ -165,7 +165,6 @@ const initializer = () => {
 	result.innerText = "";
 	winCount = 0;
 	let cardValues = generateRandom();
-	console.log(cardValues);
 	matrixGenerator(cardValues);
 };
 function startGame() {
