@@ -1,7 +1,6 @@
 const cssnano = require('cssnano')
-const postcssPresetEnv = require('postcss-preset-env')
+// const postcssPresetEnv = require('postcss-preset-env')
 const postcssWillChange = require('postcss-will-change')
-const postcssPrefixHover = require('postcss-prefix-hover')
 // const autoprefixer = require('autoprefixer')
 const postcssColorRgbaFallback = require('postcss-color-rgba-fallback')
 const postcssOpacity = require('postcss-opacity')
@@ -17,9 +16,8 @@ const postcssNested = require('postcss-nested')
 module.exports = {
     plugins: [
       cssnano({ preset: 'default' }),
-      postcssPresetEnv(),
+      // postcssPresetEnv(),
       postcssWillChange(),
-      postcssPrefixHover(),
       // autoprefixer(),
       postcssColorRgbaFallback(),
       postcssPseudoelements(),

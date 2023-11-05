@@ -41,7 +41,6 @@
     "rucksack-css": "^1.0.2"
   },
   "dependencies": {
-    "install": "^0.13.0",
-    "postcss-prefix-hover": "^1.0.3"
+    "install": "^0.13.0"
   }
 }
