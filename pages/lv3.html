@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Solve the puzzle | Home</title>
+	<link rel="stylesheet" href="/dest/css/style.css" />
+	<link rel="stylesheet" href="/dest/css/transition.css" />
+	<link rel="stylesheet" href="/dest/css/header.css">
+	<link rel="stylesheet" href="/dest/css/lv3.css" />
+	<script type="module" src="/src/js/swup.js"></script>
+</head>
+
+<body>
+	<div greetdialog page="third"></div>
+	<div header></div>
+	<div class="layout">
+		<main id="swup" class="overview transition-main">
+		<h1 data-value="Find VSA Swatch Color" class="hacktype">Find VSA Swatch Color</h1>
+		<h3>Instructions:</h3>
+		<span>
+			You can start by hovering by guessing the VSA color.<br />
+			There are 50 cards below, one of them is the VSA color!<br />
+			You only have 5 chances<br />
+		</span>
+		<br />
+		<h2 id="lives"></h2>
+		<div class="main" style="--count: 6;">
+		</div>
+		</main>
+	</div>
+	<script defer src="/dest/js/header.js"></script>
+	<script src="/dest/js/hacktype.js"></script>
+	<script src="/dest/js/greetinglevel.js"></script>
+	<script defer src="/dest/js/finishlevel.js"></script>
+	<script defer src="/dest/js/faillevel.js"></script>
+	<script src="/dest/js/lv3.js"></script>
+</body>
+
+</html>
