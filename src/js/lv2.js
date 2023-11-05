@@ -97,7 +97,7 @@ gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
 
 //Cards
 cards = document.querySelectorAll(".card-container");
-score.innerHTML =  `<span>Score:</span>${winCount}/${cardValues.length}`;
+score.innerHTML =  `<span>Score:</span>${winCount}/${Math.floor(cardValues.length / 2)}`;
 cards.forEach((card) => {
 	card.addEventListener("click", () => {
 	//If selected card is not matched yet then only run (i.e already matched card when clicked would be ignored)
