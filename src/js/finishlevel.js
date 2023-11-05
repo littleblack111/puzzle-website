@@ -9,6 +9,7 @@ function finishLevel() {
 		<form method="dialog">
 			<button autofocus id="finishPressed">Let's Go!</button>
 			<button id="finishHomePressed">Go Home!</button>
+			<button id="tryAgain">Try Again</button>
 		</form>
 	</dialog>  
 	`
@@ -20,5 +21,8 @@ function finishLevel() {
 	})
 	document.querySelector('#finishHomePressed').addEventListener('click', () => {
 		window.location.href = '/'
+	})
+	document.querySelector('#tryAgain').addEventListener('click', () => {
+		window.location.reload()
 	})
 }
