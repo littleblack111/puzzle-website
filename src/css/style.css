@@ -368,4 +368,9 @@ main a {
 
 dialog {
 	border-radius: 16px;
+	background-color: var(--swup-green);
+}
+
+button {
+	background-color: green;
 }
