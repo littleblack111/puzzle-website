@@ -16,26 +16,37 @@
 	<script type="module" src="/src/js/swup.js"></script>
 </head>
 <body>
-	<div header></div>
 	<div greetdialog page="second"></div>
-	<div class="wrapper">
-	<div class="stats-container">
-		<div id="moves-count"></div>
-		<div id="time"></div>
-		<div id="score"></div>
-		<div id="avgScore"></div>
-	</div>
-	<div class="game-container"></div>
-	<button id="stop" class="hide">Skip Game</button>
-	</div>
-	<div class="controls-container">
-	<p id="result"></p>
-	<button id="start">Start Game</button>
+	<div header></div>
+	<div class="layout">
+		<main id="swup" class="overview transition-main">
+		<h1 data-value="Remember Me" class="hacktype">Remember Me</h1>
+		<h3>Instructions:</h3>
+		<span>
+			You can start by pairing cards below<br />
+			There are 16 cards below, pair them all!<br />
+		</span>
+			<div class="wrapper">
+				<div class="stats-container">
+					<div id="moves-count"></div>
+					<div id="time"></div>
+					<div id="score"></div>
+					<div id="avgScore"></div>
+				</div>
+			<div class="game-container"></div>
+			<button id="stop" class="hide">Skip Game</button>
+			</div>
+			<div class="controls-container">
+			<p id="result"></p>
+			<button id="start">Start Game</button>
+			</div>
+		</main>
 	</div>
 	<!-- Script -->
 	<script src="/src/js/lv2.js"></script>
-	<script src="/dest/js/header.js"></script>
+	<script defer src="/dest/js/header.js"></script>
+	<script defer src="/dest/js/hacktype.js"></script>
 	<script src="/dest/js/greetinglevel.js"></script>
-	<script src="/dest/js/finishlevel.js"></script>
+	<script defer src="/dest/js/finishlevel.js"></script>
 </body>
 </html>
