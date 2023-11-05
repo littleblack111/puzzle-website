@@ -169,7 +169,7 @@ startButton.addEventListener("click", () => {
 stopButton.addEventListener(
 	"click",
 	(stopGame = () => {
-		window.location.href = "javascript:finishLevel(nextlv = '/lv3')";
+		finishLevel(nextlv = '/lv3')
 		stopButton.classList.add("hide");
 		clearInterval(interval);
 	})
