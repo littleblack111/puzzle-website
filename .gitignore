@@ -130,3 +130,6 @@ dist
 .pnp.*
 dest/**
 .vercel
+
+
+.DS_Store
