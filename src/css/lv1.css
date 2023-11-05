@@ -126,7 +126,6 @@ main a {
 	transition-property: background, color;
 	transition-duration: 150ms;
 	white-space: nowrap;
-	cursor: pointer;
 	font-weight: bold;
 }
 
@@ -169,7 +168,7 @@ main a {
 }
 
 .card:hover {
-	cursor: pointer;
+	cursor: default;
 	background: rgba(255, 255, 255, 0.05);
 	box-shadow: 0 0 10mm rgba(0,0,0,1);
 	transform: scale(1.05);
