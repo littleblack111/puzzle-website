@@ -374,3 +374,7 @@ dialog {
 button {
 	background-color: green;
 }
+
+button {
+	color: yellow;
+}
