@@ -1,5 +1,6 @@
 const moves = document.getElementById("moves-count");
 const timeValue = document.getElementById("time");
+const score = document.getElementById("score");
 const startButton = document.getElementById("start");
 const stopButton = document.getElementById("stop");
 const gameContainer = document.querySelector(".game-container");
@@ -30,8 +31,8 @@ const items = [
 let seconds = 0,
 minutes = 0;
 //Initial moves and win count
-let movesCount = 0,
-winCount = 0;
+let movesCount = 0;
+let winCount = 0;
 
 //For timer
 const timeGenerator = () => {
@@ -96,6 +97,7 @@ gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
 
 //Cards
 cards = document.querySelectorAll(".card-container");
+score.innerHTML =  `<span>Score:</span>${winCount}/${cardValues.length}`;
 cards.forEach((card) => {
 	card.addEventListener("click", () => {
 	//If selected card is not matched yet then only run (i.e already matched card when clicked would be ignored)
@@ -122,6 +124,7 @@ cards.forEach((card) => {
 			firstCard = false;
 			//winCount increment as user found a correct match
 			winCount += 1;
+			score.innerHTML =  `<span>Score:</span>${winCount}/${cardValues.length}`;
 			//check if winCount ==half of cardValues
 			if (winCount == Math.floor(cardValues.length / 2)) {
 				result.innerHTML = `<h2>You Won</h2>
