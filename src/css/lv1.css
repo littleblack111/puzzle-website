@@ -149,9 +149,10 @@ main a {
 
 .grid {
 	display: grid;
+	border: 1px solid rgba(255, 255, 255, 0.05);
 	grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
 	grid-gap: calc(0.8em + 1vw);
-	border: 1px solid rgba(255, 255, 255, 0.05);
+	box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
 	border-radius: var(--radius-1);
 }
 
