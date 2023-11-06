@@ -8,7 +8,7 @@ const gameContainer = document.querySelector(".game-container");
 const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
 let cards;
-let interval;
+let CurrentInterval;
 let firstCard = false;
 let secondCard = false;
 
@@ -171,7 +171,7 @@ stopButton.addEventListener(
 	(stopGame = () => {
 		finishLevel(nextlv = '/lv3')
 		stopButton.classList.add("hide");
-		clearInterval(interval);
+		clearCurrentInterval(CurrentInterval);
 	})
 );
 
@@ -191,7 +191,7 @@ function startGame() {
 	stopButton.classList.remove("hide");
 	startButton.classList.add("hide");
 	//Start timer
-	interval = setInterval(timeGenerator, 1000);
+	CurrentInterval = setInterval(timeGenerator, 1000);
 	//initial moves
 	moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
 	initializer();
