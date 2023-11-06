@@ -53,7 +53,7 @@ function handleSwatchClick(swatch) {
 
 		if (lives === 0) {
 			failLevel()
-			lives = 3;
+			lives = 5;
 			document.getElementById('lives').textContent = 'Lives: ' + lives;
 			generateColorSwatches();
 			createColorSwatches();
