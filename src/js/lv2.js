@@ -196,5 +196,3 @@ function startGame() {
 	initializer();
 	console.log("start game")
 };
-
-startGame();
