@@ -161,11 +161,10 @@ cards.forEach((card) => {
 };
 
 //Start game
-startButton.addEventListener("click", () => {
-	startGame();
-});
+
 
 //Stop game
+
 stopButton.addEventListener(
 	"click",
 	(stopGame = () => {
@@ -195,6 +194,7 @@ function startGame() {
 	//initial moves
 	moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
 	initializer();
+	console.log("start game")
 };
 
 startGame();
