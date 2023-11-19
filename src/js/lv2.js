@@ -159,9 +159,6 @@ cards.forEach((card) => {
 	});
 };
 
-//Start game
-
-
 //Stop game
 
 (stopGame = () => {
