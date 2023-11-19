@@ -3,7 +3,6 @@ const timeValue = document.getElementById("time");
 const score = document.getElementById("score");
 const avgScore = document.getElementById('avgScore');
 const startButton = document.getElementById("start");
-const stopButton = document.getElementById("stop");
 const gameContainer = document.querySelector(".game-container");
 const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
@@ -165,14 +164,10 @@ cards.forEach((card) => {
 
 //Stop game
 
-stopButton.addEventListener(
-	"click",
-	(stopGame = () => {
-		finishLevel(nextlv = '/lv3')
-		stopButton.classList.add("hide");
-		clearCurrentInterval(CurrentInterval);
-	})
-);
+(stopGame = () => {
+	finishLevel(nextlv = '/lv3')
+	clearCurrentInterval(CurrentInterval);
+})
 
 //Initialize values and func calls
 const initializer = () => {
@@ -187,7 +182,6 @@ function startGame() {
 	minutes = 0;
 	//controls amd buttons visibility
 	controls.classList.add("hide");
-	stopButton.classList.remove("hide");
 	startButton.classList.add("hide");
 	//Start timer
 	CurrentInterval = setInterval(timeGenerator, 1000);
