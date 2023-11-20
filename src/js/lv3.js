@@ -46,6 +46,7 @@ function generateColorSwatches() {
 
 function handleSwatchClick(swatch) {
 	if ((swatch.style.backgroundColor === 'rgb(136, 0, 43)')||(swatch.style.backgroundColor === 'rgb(0, 76, 128)')) {
+		console.log("innovationvsa{fInALLy_f0UNd_1t}")
 		finishLevel(nextlv = '/lv4')
 	} else {
 		lives--;

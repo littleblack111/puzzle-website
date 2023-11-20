@@ -162,6 +162,7 @@ cards.forEach((card) => {
 //Stop game
 
 (stopGame = () => {
+	console.log("innovationvsa{p0Or_mEmory_mEN")
 	finishLevel(nextlv = '/lv3')
 	clearCurrentInterval(CurrentInterval);
 })
